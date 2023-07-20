@@ -34,7 +34,7 @@ activities = [
 
 
   activities.each do |activity|
-    Activity.create(activity)
+    user1.activities.create(activity)
     p "created: #{activity}"
   end
 
