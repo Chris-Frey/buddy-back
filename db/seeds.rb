@@ -1,5 +1,5 @@
-user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password", username: "AJ", name: "Jesus", photo: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60", bio: "I'm cool", gender_identity: "male" )
-user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password", username: "Chris12", name: "Chris", photo: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3V5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", bio: "I'm also cool", gender_identity: "male" )
+user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password", username: "AJ", name: "Jesus", photo: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60", bio: "I'm cool", gender_identity: "male")
+user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password", username: "Chris12", name: "Chris", photo: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3V5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", bio: "I'm also cool", gender_identity: "male")
 
 
 activities = [
@@ -10,7 +10,8 @@ activities = [
     start_time: '10am',
     duration: 2,
     location: 'IB',
-    description: 'bring your own soccer ball'
+    description: 'bring your own soccer ball',
+    creator_id: user1.id
 },
 {   
     category: 'volleyball',
@@ -19,7 +20,8 @@ activities = [
     start_time: '11am',
     duration: 2,
     location: 'IB',
-    description: 'bring your own drinks ball'
+    description: 'bring your own drinks ball',
+    creator_id: user2.id
 },
 {   
     category: 'basketball',
@@ -28,14 +30,28 @@ activities = [
     start_time: '2pm',
     duration: 2,
     location: 'IB',
-    description: 'bring your own basketball and drinks'
+    description: 'bring your own basketball and drinks',
+    creator_id: user1.id
 },
+]
+
+user_activities = [
+    {
+        activity_id: 1,
+        user_id: user2.id
+    },
+    
 ]
 
 
   activities.each do |activity|
-    user1.activities.create(activity)
+    Activity.create(activity)
     p "created: #{activity}"
+  end
+
+  user_activities.each do |activity|
+    UserActivities.create(activity)
+    p "created: #{useractivities}"
   end
 
 
