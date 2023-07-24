@@ -35,23 +35,21 @@ activities = [
 },
 ]
 
+activities.each do |activity|
+    Activity.create(activity)
+    p "created: #{activity}"
+end
+
 user_activities = [
     {
         activity_id: 1,
-        user_id: user2.id
-    },
-    
+        user_id: 2
+    }
 ]
 
-
-  activities.each do |activity|
-    Activity.create(activity)
-    p "created: #{activity}"
-  end
-
   user_activities.each do |activity|
-    UserActivities.create(activity)
-    p "created: #{useractivities}"
+    UserActivity.create(activity)
+    p "created: #{activity}"
   end
 
 
