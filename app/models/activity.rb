@@ -1,4 +1,5 @@
 class Activity < ApplicationRecord
-    belongs_to :user
-    validates :category, :activity, :activity_photo, :start_time, :duration, :location, :description, presence: true
+    has_many :users, through: :user_activities
+    has_many :user_activities
+    belongs_to :creator, class_name: 'User', foreign_key: 'creator_id'
 end
