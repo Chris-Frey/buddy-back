@@ -9,7 +9,7 @@ RSpec.describe Activity, type: :model do
   }
 
     it 'should have a category' do
-    activity = user.activities.create(
+    activity = Activity.create(
       activity: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
@@ -23,8 +23,8 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'should have activity' do
-    activity = user.activities.create(
-      category: 'soccer'
+    activity = Activity.create(
+      category: 'soccer',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
       duration: 2,
@@ -37,8 +37,8 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'should have activity_photo' do
-    activity = user.activities.create(
-      category: 'soccer'
+    activity = Activity.create(
+      category: 'soccer',
       activity: '2v2 pick up game',
       start_time: '10am',
       duration: 2,
@@ -51,8 +51,8 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'should have a start_time' do
-    activity = user.activities.create(
-      category: 'soccer'
+    activity = Activity.create(
+      category: 'soccer',
       activity: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       duration: 2,
@@ -64,9 +64,9 @@ RSpec.describe Activity, type: :model do
     expect(activity.errors[:start_time]).to include("can't be blank")
   end
 
-  it 'should have a duartion' do
-    activity = user.activities.create(
-      category: 'soccer'
+  it 'should have a duration' do
+    activity = Activity.create(
+      category: 'soccer',
       activity: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
@@ -79,8 +79,8 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'should have a location' do
-    activity = user.activities.create(
-      category: 'soccer'
+    activity = Activity.create(
+      category: 'soccer',
       activity: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
@@ -93,8 +93,8 @@ RSpec.describe Activity, type: :model do
   end
 
   it 'should have a description' do
-    activity = user.activities.create(
-      category: 'soccer'
+    activity = Activity.create(
+      category: 'soccer',
       activity: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
