@@ -21,12 +21,15 @@ class ActivitiesController < ApplicationController
         end
     end
 
-    # def destroy 
-    # end
+    def destroy 
+        activity = Activity.find(params[:id])
+        activity.delete
+        render json: activity
+    end
 
 
     private 
     def activity_params
-        params.require(:activity).permit(:category, :activity, :activity_photo, :start_time, :duration, :location, :description)
+        params.require(:activity).permit(:category, :activity, :activity_photo, :start_time, :duration, :location, :description, :creator_id)
     end
 end

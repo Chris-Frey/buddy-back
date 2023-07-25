@@ -11,6 +11,11 @@ class UserActivitiesController < ApplicationController
             render json: user_activity.errors, status: 422
         end
     end
+    def destroy 
+        user_activity = UserActivity.find(params[:id])
+        user_activity.delete
+        render json: user_activity
+    end
 
     private 
     def user_activity_params

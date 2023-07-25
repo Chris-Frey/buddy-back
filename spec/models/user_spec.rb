@@ -1,13 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create(
-    email: 'test1@example.com',
-    password: 'password',
-    password_confirmation: 'password'
-    )
-  }
-
   it 'should have a username' do
     user = User.create(
       photo: 'https://publicdomainvectors.org/photos/1292286629.png',
@@ -15,7 +8,6 @@ RSpec.describe User, type: :model do
       bio: 'I am cool',
       gender_identity: 'Male',
     )
-
     expect(user.errors[:username]).to_not be_empty
     expect(user.errors[:username]).to include("can't be blank")
   end
@@ -27,7 +19,6 @@ RSpec.describe User, type: :model do
       bio: 'I am cool',
       gender_identity: 'Male',
     )
-
     expect(user.errors[:photo]).to_not be_empty
     expect(user.errors[:photo]).to include("can't be blank")
   end
@@ -39,7 +30,6 @@ RSpec.describe User, type: :model do
       bio: 'I am cool',
       gender_identity: 'Male',
     )
-
     expect(user.errors[:name]).to_not be_empty
     expect(user.errors[:name]).to include("can't be blank")
   end
@@ -51,7 +41,6 @@ RSpec.describe User, type: :model do
       name: 'Jesus',
       gender_identity: 'Male',
     )
-
     expect(user.errors[:bio]).to_not be_empty
     expect(user.errors[:bio]).to include("can't be blank")
   end
@@ -63,7 +52,6 @@ RSpec.describe User, type: :model do
       name: 'Jesus',
       bio: 'I am cool',
     )
-
     expect(user.errors[:gender_identity]).to_not be_empty
     expect(user.errors[:gender_identity]).to include("can't be blank")
   end
