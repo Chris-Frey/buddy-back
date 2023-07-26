@@ -57,7 +57,7 @@ RSpec.describe Activity, type: :model do
   it 'should have a start_time' do
     activity = Activity.create(
       category: 'soccer',
-      activity: '2v2 pick up game',
+      activity_name: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       duration: 2,
       location: 'IB',
@@ -71,7 +71,7 @@ RSpec.describe Activity, type: :model do
   it 'should have a duration' do
     activity = Activity.create(
       category: 'soccer',
-      activity: '2v2 pick up game',
+      activity_name: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
       location: 'IB',
@@ -85,7 +85,7 @@ RSpec.describe Activity, type: :model do
   it 'should have a location' do
     activity = Activity.create(
       category: 'soccer',
-      activity: '2v2 pick up game',
+      activity_name: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
       duration: 2,
@@ -99,7 +99,7 @@ RSpec.describe Activity, type: :model do
   it 'should have a description' do
     activity = Activity.create(
       category: 'soccer',
-      activity: '2v2 pick up game',
+      activity_name: '2v2 pick up game',
       activity_photo: 'https://publicdomainvectors.org/photos/1292286629.png',
       start_time: '10am',
       duration: 2,
