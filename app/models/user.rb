@@ -8,5 +8,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
   
-  validates :username, :name, :photo, :bio, :gender_identity, presence: true
+  validates :username, :name, :gender_identity, presence: true
 end
