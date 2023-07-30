@@ -18,7 +18,7 @@ activities = [
     activity_name: '5k slow',
     activity_photo: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2685&q=80',
     start_time: '1100',
-    duration: .5,
+    duration: 0.5,
     location: 'Pacific Beach',
     description: 'Want to go at a pace we can still talk at',
     creator_id: user2.id
