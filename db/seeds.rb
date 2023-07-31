@@ -302,8 +302,8 @@ end
 
 user_activities = [
     {
-        activity_id: 17,
-        user_id: 12
+        activity_id: 1,
+        user_id: 2
     }
 ]
 
