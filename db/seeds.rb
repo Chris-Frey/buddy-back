@@ -1,5 +1,5 @@
 user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password", username: "AJ", name: "Jesus", photo: "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60", bio: "I'm cool", gender_identity: "male")
-user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password", username: "Chris12", name: "Chris", photo: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3V5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60", bio: "I'm also cool", gender_identity: "male")
+user2 = User.where(email: "chris@jcp.com").first_or_create(password: "password", password_confirmation: "password", username: "Chris12", name: "Chris", photo: "https://media.licdn.com/dms/image/C5603AQGPJpuCt00ZfA/profile-displayphoto-shrink_800_800/0/1643264241799?e=1695859200&v=beta&t=qW17TWhrSqxec_5lGllLZUBpsv99I0z8PWieOLwztNI", bio: "I'm also cool", gender_identity: "male")
 
 
 activities = [
@@ -34,7 +34,7 @@ activities = [
     creator_id: user1.id
 },
 {   
-    category: 'weight_lifting',
+    category: 'weight lifting',
     activity_name: 'Leg day',
     activity_photo: 'https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     start_time: '1900',
@@ -94,10 +94,10 @@ activities = [
     creator_id: user1.id
 },
 {   
-    category: 'weight_lifting',
+    category: 'weight lifting',
     activity_name: 'Crossfit',
     activity_photo: 'https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-    start_time: '600',
+    start_time: '700',
     duration: 1,
     location: 'Downtown',
     description: "Need a spotter, and I'll return the favor. Be able to spot for 200lb bench. Thanks",
@@ -124,7 +124,7 @@ activities = [
     creator_id: user1.id
 },
 {   
-    category: 'weight_lifting',
+    category: 'weight lifting',
     activity_name: 'Late night session',
     activity_photo: 'https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     start_time: '2200',
@@ -183,6 +183,116 @@ activities = [
     description: 'Play for an hour, no rough game',
     creator_id: user1.id
 },
+{   
+    category: 'hiking',
+    activity_name: 'Torrey Pines Nature Walk',
+    activity_photo: 'https://images.unsplash.com/photo-1682685797406-97f364419b4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    start_time: '830',
+    duration: 2,
+    location: 'Torrey Pines',
+    description: "Start at the parking lot and go up the hill.  Comedown on the beach and walk back towards the lot.  Happy to chill on the beach for a bit as well!",
+    creator_id: user1.id
+},
+{   
+    category: 'cycling',
+    activity_name: 'Balboa Circuit',
+    activity_photo: 'https://images.unsplash.com/photo-1620802090791-fd9420668913?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80',
+    start_time: '745',
+    duration: 1,
+    location: 'Balboa Park',
+    description: "Let's hit it before traffic starts. Not a hardcore ride, but we're not going slow.",
+    creator_id: user1.id
+},
+{   
+    category: 'weight lifting',
+    activity_name: 'Early lunch Crossfit',
+    activity_photo: 'https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    start_time: '1030',
+    duration: 1,
+    location: 'Invictus',
+    description: "Quick full-body circuit before lunch. Any experience level, just looking for someone to hype with.",
+    creator_id: user1.id
+},
+{   
+    category: 'Running',
+    activity_name: 'Hill Sprints',
+    activity_photo: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2685&q=80',
+    start_time: '1030',
+    duration: 0.5,
+    location: 'Bird Rock',
+    description: "Going hard on the hills. 10 minute warmup and then we go. I have a pre-set route ready!",
+    creator_id: user1.id
+},
+{   
+    category: 'Running',
+    activity_name: 'Estuary Run',
+    activity_photo: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2685&q=80',
+    start_time: '730',
+    duration: 2,
+    location: 'Imperial Beach',
+    description: "Sunrise out and back on the estuary trails. 1 stop for water. About 9 minute mile pace.",
+    creator_id: user1.id
+},
+{   
+    category: 'Running',
+    activity_name: 'Lake Circuit',
+    activity_photo: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2685&q=80',
+    start_time: '845',
+    duration: 2,
+    location: 'Sweetwater Reservoir',
+    description: "12 mile run around the water. Stops at 4 and 8 miles for about 5 min because I'm still getting good at this",
+    creator_id: user1.id
+},
+{   
+    category: 'yoga',
+    activity_name: 'Vinyasa Flow',
+    activity_photo: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2720&q=80',
+    start_time: '830',
+    duration: 1,
+    location: 'Sunset Cliffs',
+    description: "Down by the water at low tide. Bring your own mat.",
+    creator_id: user1.id
+},
+{   
+    category: 'Running',
+    activity_name: 'Lake Circuit',
+    activity_photo: 'https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2685&q=80',
+    start_time: '700',
+    duration: 2,
+    location: 'Lake murray',
+    description: "10 laps since it's so short.",
+    creator_id: user1.id
+},
+{   
+    category: 'cycling',
+    activity_name: 'Mountain Biking',
+    activity_photo: 'https://images.unsplash.com/photo-1620802090791-fd9420668913?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80',
+    start_time: '800',
+    duration: 1,
+    location: 'Penasquitos Canyon',
+    description: "More of a trail ride with a few hills. Doing it for fun, so we're not racing.",
+    creator_id: user1.id
+},
+{   
+    category: 'basketball',
+    activity_name: '2v2 pick up game',
+    activity_photo: 'https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2400&q=80',
+    start_time: '900',
+    duration: 2,
+    location: 'UCSD Gym',
+    description: 'Nothing intense, just some early day fun and exercise',
+    creator_id: user1.id
+},
+{   
+    category: 'cycling',
+    activity_name: 'Mountain Biking',
+    activity_photo: 'https://images.unsplash.com/photo-1620802090791-fd9420668913?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80',
+    start_time: '1330',
+    duration: 1,
+    location: 'Mission Trails',
+    description: "Just a short fun speed loop. Good cardio!",
+    creator_id: user1.id
+},
 ]
 
 activities.each do |activity|
@@ -192,8 +302,8 @@ end
 
 user_activities = [
     {
-        activity_id: 1,
-        user_id: 2
+        activity_id: 17,
+        user_id: 12
     }
 ]
 
@@ -201,5 +311,3 @@ user_activities = [
     UserActivity.create(activity)
     p "created: #{activity}"
   end
-
-
