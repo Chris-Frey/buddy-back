@@ -1,7 +1,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
       # origins 'localhost:3001'
-      origins 'buddy-frontend.onrender.com'
+      origins 'https://whim-front.onrender.com'
       resource '*',
       headers: ["Authorization"],
       expose: ["Authorization"],
