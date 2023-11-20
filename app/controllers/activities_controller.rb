@@ -1,13 +1,13 @@
 class ActivitiesController < ApplicationController
     def index
-        activities = Activity.all 
+        activities = Activity.all
         render json: activities
     end
-    def create 
+    def create
         activity = Activity.create(activity_params)
         if activity.valid?
             render json: activity
-        else 
+        else
             render json: activity.errors, status: 422
         end
     end
@@ -21,14 +21,14 @@ class ActivitiesController < ApplicationController
         end
     end
 
-    def destroy 
+    def destroy
         activity = Activity.find(params[:id])
         activity.delete
         render json: activity
     end
 
 
-    private 
+    private
     def activity_params
         params.require(:activity).permit(:category, :activity_name, :activity_photo, :start_time, :duration, :location, :description, :creator_id)
     end
